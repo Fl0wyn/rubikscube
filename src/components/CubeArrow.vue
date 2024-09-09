@@ -47,4 +47,12 @@ const props = defineProps({
     :arrow="arrow"
   >
   </Cube>
+  <Cube
+    v-if="face === 'back'"
+    :top="['X', 'X', 'X', '', '', '', '', '', '']"
+    :left="['', '', '', '', '', '', '', '', '']"
+    :right="['', '', 'X', '', '', 'X', '', '', 'X']"
+    :arrow="arrow"
+  >
+  </Cube>
 </template>

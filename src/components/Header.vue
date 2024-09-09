@@ -1,11 +1,16 @@
+<script setup>
+const props = defineProps({
+  title: String,
+});
+</script>
+
 <template>
-  <div class="px-2 pt-1 shadow-sm bg-white rounded-none">
-    <div class="font-semibold">
-      <span class="border px-1.5 bg-yellow-300">T</span>
-      <span class="border px-1.5">u</span>
-      <span class="border px-1.5">t</span>
-      <span class="border px-1.5">o</span>
-      <div class="ml-6">Rubik's Cube</div>
+  <header class="p-2 shadow-sm bg-white rounded-none">
+    <div class="flex items-center gap-2">
+      <img src="/logo.svg" class="size-4" />
+      <div class="font-semibold">
+        {{ title }}
+      </div>
     </div>
-  </div>
+  </header>
 </template>

@@ -8,9 +8,9 @@ import CubeArrow from "@/components/CubeArrow.vue";
     <div class="font-semibold pb-1">Cas 1</div>
     <div class="sm:flex items-center">
       <Cube
-        :top="['', '', '', '', '', '', '', '', 'o']"
-        :left="['', '', 'b', '', 'o', '', '', 'o', '']"
-        :right="['g', '', '', '', 'g', '', '', 'g', '']"
+        :top="['', '', '', '', '', '', '', '', 'g']"
+        :left="['', '', 'w', '', 'g', '', '', 'g', '']"
+        :right="['o', '', '', '', 'o', '', '', 'o', '']"
       ></Cube>
       <CubeArrow face="t" arrow="l" />
       <CubeArrow face="r" arrow="t" />
@@ -23,14 +23,14 @@ import CubeArrow from "@/components/CubeArrow.vue";
     <div class="font-semibold pb-1">Cas 2</div>
     <div class="sm:flex items-center">
       <Cube
-        :top="['', '', '', '', '', '', '', '', 'g']"
-        :left="['', '', 'o', '', 'o', '', '', 'o', '']"
-        :right="['b', '', '', '', 'g', '', '', 'g', '']"
+        :top="['', '', '', '', '', '', '', '', 'o']"
+        :left="['', '', 'g', '', 'g', '', '', 'g', '']"
+        :right="['w', '', '', '', 'o', '', '', 'o', '']"
       ></Cube>
-      <CubeArrow face="f" arrow="r" />
-      <CubeArrow face="r" arrow="b" />
-      <CubeArrow face="f" arrow="r" />
-      <CubeArrow face="r" arrow="t" />
+      <CubeArrow face="t" arrow="r" />
+      <CubeArrow face="f" arrow="rl" />
+      <CubeArrow face="t" arrow="l" />
+      <CubeArrow face="f" arrow="rr" />
     </div>
   </div>
 
@@ -41,9 +41,9 @@ import CubeArrow from "@/components/CubeArrow.vue";
     </div>
     <div class="sm:flex items-center">
       <Cube
-        :top="['', '', '', '', '', '', '', '', 'b']"
-        :left="['', '', 'g', '', 'o', '', '', 'o', '']"
-        :right="['o', '', '', '', 'g', '', '', 'g', '']"
+        :top="['', '', '', '', '', '', '', '', 'w']"
+        :left="['', '', 'o', '', 'g', '', '', 'g', '']"
+        :right="['g', '', '', '', 'o', '', '', 'o', '']"
       ></Cube>
       <CubeArrow face="r" arrow="t" />
       <CubeArrow face="t" arrow="l" />

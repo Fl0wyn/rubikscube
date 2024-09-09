@@ -1,26 +1,39 @@
 <script setup>
+import arrowDown from "@/assets/arrowDown.svg";
+import arrowLeft from "@/assets/arrowLeft.svg";
+import arrowRight from "@/assets/arrowRight.svg";
+import arrowRotateLeft from "@/assets/arrowRotateLeft.svg";
+import arrowRotateRight from "@/assets/arrowRotateRight.svg";
+import arrowUp from "@/assets/arrowUp.svg";
+
 const props = defineProps({
   left: Array,
   right: Array,
   top: Array,
+  rotateLeft: Array,
+  rotateRight: Array,
   arrow: String,
 });
 
 const colorTheme = (color) => {
-  if (color === "b") return "bg-white";
+  if (color === "w") return "bg-white";
   if (color === "o") return "bg-orange-600";
   if (color === "g") return "bg-green-600";
+  if (color === "b") return "bg-blue-600";
+  if (color === "r") return "bg-red-600";
   if (color === "y") return "bg-yellow-400";
   if (color === "X") return "bg-slate-800";
   return "bg-slate-400";
 };
 
 const ArrowPosition = (pos) => {
-  if (pos === "t") return "⬆️";
-  if (pos === "r") return "➡️";
-  if (pos === "b") return "⬇️";
-  if (pos === "l") return "⬅️";
-  return pos;
+  if (pos === "t") return arrowUp;
+  if (pos === "r") return arrowRight;
+  if (pos === "b") return arrowDown;
+  if (pos === "l") return arrowLeft;
+  if (pos === "rr") return arrowRotateRight;
+  if (pos === "rl") return arrowRotateLeft;
+  return null;
 };
 
 const colors = [
@@ -43,11 +56,6 @@ const colors = [
 </script>
 
 <template>
-  <!-- <Cube
-  :top="['', '', '', '', '', '', '', '', '']"
-  :left="['', '', '', '', '', '', '', '', '']"
-  :right="['', '', '', '', '', '', '', '', '']"
-></Cube> -->
   <div class="p-4">
     <div class="relative cube size-[50px] mr-4">
       <div
@@ -57,14 +65,20 @@ const colors = [
         :key="i"
       >
         <div
-          class="size-[16.5px] border"
+          class="size-[16.5px] border text-xs flex justify-center items-center text-slate-300"
           :class="colorTheme(colors[i].color[n - 1])"
           v-for="n in 9"
           :key="n"
-        ></div>
+        >
+          <!-- {{ n }} -->
+        </div>
       </div>
     </div>
-    <div class="absolute">{{ArrowPosition(props.arrow)}}</div>
+    <div class="absolute z-10" v-if="ArrowPosition(props.arrow) !== null">
+      <div class="bg-blue-600 border-2 border-white rounded-full p-1.5">
+        <img class="size-5" :src="ArrowPosition(props.arrow)" />
+      </div>
+    </div>
   </div>
 </template>
 
