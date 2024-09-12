@@ -2,7 +2,8 @@ export const steps = [
   {
     step: 1,
     title: "Etape 1",
-    subtitle: "Première courone",
+    subtitle: "Première courone et centre",
+    detail: "Orientation des coins",
     cubes: [
       {
         title: "Cas 1",
@@ -46,7 +47,8 @@ export const steps = [
   {
     step: 2,
     title: "Etape 2",
-    subtitle: "Deuxième courone",
+    subtitle: "Deuxième courone et coins",
+    detail: "",
     cubes: [
       {
         title: "Cas 1",
@@ -92,7 +94,8 @@ export const steps = [
   {
     step: 3,
     title: "Etape 3",
-    subtitle: "Troisième courone",
+    subtitle: "Centre et coins",
+    detail: "",
     cubes: [
       {
         title: "Cas 1",
@@ -134,7 +137,8 @@ export const steps = [
   {
     step: 4,
     title: "Etape 4",
-    subtitle: "Fin",
+    subtitle: "Troisième courone & fin",
+    detail: "",
     cubes: [
       {
         title: "Etape A",
@@ -203,11 +207,6 @@ export const steps = [
     title: "Terminé !",
     subtitle: "Fin",
     cubes: [
-      {
-        top: ["y", "y", "y", "y", "y", "y", "y", "y", "y"],
-        right: ["o", "o", "o", "o", "o", "o", "o", "o", "o"],
-        left: ["g", "g", "g", "g", "g", "g", "g", "g", "g"],
-      },
       {
         top: ["w", "w", "w", "w", "w", "w", "w", "w", "w"],
         left: ["o", "o", "o", "o", "o", "o", "o", "o", "o"],

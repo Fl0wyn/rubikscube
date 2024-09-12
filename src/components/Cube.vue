@@ -13,6 +13,7 @@ const props = defineProps({
   rotateRight: Array,
   rotateLeft: Array,
   arrow: String,
+  arrowIndex: Number,
 });
 
 const colorTheme = (color) => {
@@ -56,8 +57,8 @@ const colors = [
 </script>
 
 <template>
-  <div class="p-4">
-    <div class="relative cube size-[50px] mr-4">
+  <div>
+    <div class="relative cube size-[50px]">
       <div
         class="absolute flex flex-wrap size-[50px] bg-white"
         :style="colors[i]"
@@ -76,6 +77,11 @@ const colors = [
     </div>
     <div class="absolute z-10" v-if="ArrowPosition(props.arrow) !== null">
       <div class="bg-blue-600 border-2 border-white rounded-full p-1.5">
+        <div
+          class="absolute bottom-[-0.3rem] left-6 bg-blue-600 border-2 border-white rounded-full px-1 text-xs text-white"
+        >
+          {{ props.arrowIndex }}
+        </div>
         <img class="size-5" :src="ArrowPosition(props.arrow)" />
       </div>
     </div>
