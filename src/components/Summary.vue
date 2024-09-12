@@ -21,6 +21,11 @@ const cubes = [
     left: ["o", "o", "o", "o", "o", "o", "o", "o", "o"],
     right: ["g", "g", "g", "g", "g", "g", "g", "g", "g"],
   },
+  {
+    top: ["w", "w", "w", "w", "w", "w", "w", "w", "w"],
+    left: ["o", "o", "o", "o", "o", "o", "o", "o", "o"],
+    right: ["g", "g", "g", "g", "g", "g", "g", "g", "g"],
+  },
 ];
 </script>
 

@@ -1,3 +1,3 @@
 # rubikscube
 
-Beta
+Work in progress

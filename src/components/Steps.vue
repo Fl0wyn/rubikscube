@@ -17,7 +17,14 @@ const props = defineProps({
     <div class="p-4">
       <div class="flex flex-row sm:flex-col justify-between gap-2">
         <div class="py-2" v-for="c in step.cubes" key="c.title">
-          <div class="font-semibold pb-1">{{ c.title }}</div>
+          <div class="font-semibold pb-1">
+            {{ c.title }}
+            <span
+              v-if="c.badge"
+              class="font-bold rounded bg-blue-600 text-white px-1"
+              >{{ c.badge }}</span
+            >
+          </div>
           <div class="sm:flex items-center">
             <Cube :top="c.top" :left="c.left" :right="c.right" />
             <template v-if="c.moves">
