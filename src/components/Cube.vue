@@ -7,21 +7,21 @@ import arrowRotateRight from "@/assets/arrowRotateRight.svg";
 import arrowUp from "@/assets/arrowUp.svg";
 
 const props = defineProps({
-  left: Array,
-  right: Array,
   top: Array,
-  rotateLeft: Array,
+  right: Array,
+  left: Array,
   rotateRight: Array,
+  rotateLeft: Array,
   arrow: String,
 });
 
 const colorTheme = (color) => {
   if (color === "w") return "bg-white";
+  if (color === "y") return "bg-yellow-400";
   if (color === "o") return "bg-orange-600";
   if (color === "g") return "bg-green-600";
   if (color === "b") return "bg-blue-600";
   if (color === "r") return "bg-red-600";
-  if (color === "y") return "bg-yellow-400";
   if (color === "X") return "bg-slate-800";
   return "bg-slate-400";
 };
@@ -38,9 +38,9 @@ const ArrowPosition = (pos) => {
 
 const colors = [
   {
-    face: "left",
-    color: props.left,
-    transform: "translateZ(25px)",
+    face: "top",
+    color: props.top,
+    transform: "rotateX(90deg) translateZ(25px)",
   },
   {
     face: "right",
@@ -48,9 +48,9 @@ const colors = [
     transform: "rotateY(90deg) translateZ(25px)",
   },
   {
-    face: "top",
-    color: props.top,
-    transform: "rotateX(90deg) translateZ(25px)",
+    face: "left",
+    color: props.left,
+    transform: "translateZ(25px)",
   },
 ];
 </script>
