@@ -8,7 +8,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="my-2" v-for="step in steps" :key="step.title">
+  <div class="my-8" v-for="step in steps" :key="step.title">
     <div class="bg-white px-2 py-1">
       <h1 class="font-semibold">{{ step.title }}</h1>
       <h2 class="font-light">{{ step.subtitle }}</h2>
@@ -29,7 +29,6 @@ const props = defineProps({
           <Cube class="p-7" :top="c.top" :left="c.left" :right="c.right" />
           <template v-if="c.moves">
             <CubeMove
-              class="py-6"
               v-for="(m, i) in c.moves"
               :face="m.face"
               :arrow="m.arrow"

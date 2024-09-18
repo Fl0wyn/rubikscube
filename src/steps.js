@@ -166,9 +166,9 @@ export const steps = [
       },
       {
         title: "Etape B",
-        top: [],
-        right: [],
-        left: [],
+        top: ["", "y", "", "y", "y", "y", "", "y", "o"],
+        left: ["", "g", "y", "g", "g", "g", "g", "g", "g"],
+        right: ["g", "o", "", "o", "o", "o", "o", "o", "o"],
         moves: [
           { face: "r", arrow: "b" },
           { face: "b", arrow: "l" },
@@ -178,9 +178,9 @@ export const steps = [
       },
       {
         title: "Etape C",
-        top: [],
-        right: [],
-        left: [],
+        top: ["", "y", "", "y", "y", "y", "", "y", ""],
+        left: ["y", "g", "y", "g", "g", "g", "g", "g", "g"],
+        right: ["g", "o", "", "o", "o", "o", "o", "o", "o"],
         moves: [
           { face: "f", arrow: "rl" },
           { face: "t", arrow: "l" },

@@ -1,3 +1,1 @@
-# rubikscube
-
-Work in progress
+# Memo Rubik's Cube
